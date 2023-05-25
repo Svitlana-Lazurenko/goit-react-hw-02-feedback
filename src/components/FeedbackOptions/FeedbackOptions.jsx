@@ -19,3 +19,9 @@ export const FeedbackOptions = ({ options, title, handleIncrement }) => (
     </List>
   </Block>
 );
+
+FeedbackOptions.propTypes = {
+  options: PropTypes.arrayOf(PropTypes.string.isRequired),
+  title: PropTypes.string.isRequired,
+  handleIncrement: PropTypes.func.isRequired,
+};
