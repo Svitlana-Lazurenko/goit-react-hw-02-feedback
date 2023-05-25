@@ -20,7 +20,7 @@ class App extends Component {
   };
 
   countPositiveFeedbackPercentage = number => {
-    return (100 / number) * this.state.good;
+    return Math.round((100 / number) * this.state.good);
   };
 
   handleIncrement = e => {

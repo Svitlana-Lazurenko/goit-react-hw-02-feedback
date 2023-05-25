@@ -30,3 +30,11 @@ export const Statistics = ({
     )}
   </Block>
 );
+
+Statistics.propTypes = {
+  options: PropTypes.arrayOf(PropTypes.string.isRequired),
+  title: PropTypes.string.isRequired,
+  state: PropTypes.objectOf(PropTypes.number.isRequired),
+  total: PropTypes.number.isRequired,
+  positivePercentage: PropTypes.number.isRequired,
+};
