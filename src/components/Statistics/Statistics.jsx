@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Notification } from '../Notification/Notification';
-import { Block, Title, List, Item, Text } from './Statistics.styled';
+import { Block, Title, List, Item, ItemText, Text } from './Statistics.styled';
 
 export const Statistics = ({
   options,
@@ -18,7 +18,9 @@ export const Statistics = ({
         <List>
           {options.map(option => (
             <Item key={option}>
-              {option}: {state[option]}
+              <ItemText>
+                {option}: {state[option]}
+              </ItemText>
             </Item>
           ))}
         </List>

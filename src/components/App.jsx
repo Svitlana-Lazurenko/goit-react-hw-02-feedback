@@ -3,7 +3,7 @@ import { Section } from './Section/Section';
 import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
 import { Statistics } from './Statistics/Statistics';
 
-class App extends Component {
+export class App extends Component {
   state = {
     good: 0,
     neutral: 0,
@@ -24,9 +24,9 @@ class App extends Component {
   };
 
   handleIncrement = e => {
-    const nameButton = e.target.name;
+    const btnName = e.currentTarget.name;
     this.setState(prevState => ({
-      [nameButton]: prevState[nameButton] + 1,
+      [btnName]: prevState[btnName] + 1,
     }));
   };
 
@@ -52,5 +52,3 @@ class App extends Component {
     );
   }
 }
-
-export default App;
