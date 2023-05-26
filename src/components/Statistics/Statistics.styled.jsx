@@ -4,6 +4,7 @@ export const Block = styled.div``;
 
 export const Title = styled.h2`
   text-align: center;
+  margin-bottom: 30px;
 `;
 
 export const List = styled.ul`
