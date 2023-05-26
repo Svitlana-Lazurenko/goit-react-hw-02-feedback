@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Block, Title, List, Button } from './FeedbackOptions.styled';
+import { Block, Title, BtnBlock, Button } from './FeedbackOptions.styled';
 
 export const FeedbackOptions = ({ options, title, handleIncrement }) => (
   <Block>
     <Title>{title}</Title>
-    <List>
+    <BtnBlock>
       {options.map(option => (
         <Button
           key={option}
@@ -16,7 +16,7 @@ export const FeedbackOptions = ({ options, title, handleIncrement }) => (
           {option}
         </Button>
       ))}
-    </List>
+    </BtnBlock>
   </Block>
 );
 
