@@ -36,13 +36,13 @@ export class App extends Component {
 
     return (
       <>
-        <Section title={'Please, leave feedback'}>
+        <Section title='Please, leave feedback'>
           <FeedbackOptions
             options={this.options}
             handleIncrement={this.handleIncrement}
           />
         </Section>
-        <Section title={'Statistics'}>
+        <Section title='Statistics'>
           <Statistics
             options={this.options}
             state={this.state}
