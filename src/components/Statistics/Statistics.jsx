@@ -1,18 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Notification } from '../Notification/Notification';
-import { Block, Title, List, Item, ItemText, Text } from './Statistics.styled';
+import {
+  List,
+  Item,
+  ItemText,
+  TotalFeedback,
+  PositiveFeedback,
+} from './Statistics.styled';
 
-export const Statistics = ({
-  options,
-  title,
-  state,
-  total,
-  positivePercentage,
-}) => (
-  <Block>
-    <Title>{title}</Title>
-
+export const Statistics = ({ options, state, total, positivePercentage }) => (
+  <>
     {total > 0 ? (
       <>
         <List>
@@ -24,18 +22,19 @@ export const Statistics = ({
             </Item>
           ))}
         </List>
-        <Text>Total feedback: {total}</Text>
-        <Text>Positive feedback: {positivePercentage}%</Text>
+        <TotalFeedback>Total feedback: {total}</TotalFeedback>
+        <PositiveFeedback>
+          Positive feedback: {positivePercentage}%
+        </PositiveFeedback>
       </>
     ) : (
       <Notification message="There is no feedback" />
     )}
-  </Block>
+  </>
 );
 
 Statistics.propTypes = {
   options: PropTypes.arrayOf(PropTypes.string.isRequired),
-  title: PropTypes.string.isRequired,
   state: PropTypes.objectOf(PropTypes.number.isRequired),
   total: PropTypes.number.isRequired,
   positivePercentage: PropTypes.number.isRequired,

@@ -9,3 +9,8 @@ export const SectionFeedback = styled.section`
   box-shadow: 1px 1px 2px rgb(53, 202, 8), 0 0 1em rgb(53, 202, 8);
   padding: 40px;
 `;
+
+export const Title = styled.h1`
+  text-align: center;
+  margin-bottom: 30px;
+`;

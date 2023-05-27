@@ -1,12 +1,5 @@
 import styled from '@emotion/styled';
 
-export const Block = styled.div``;
-
-export const Title = styled.h2`
-  text-align: center;
-  margin-bottom: 30px;
-`;
-
 export const List = styled.ul`
   margin-bottom: 40px;
 `;
@@ -19,12 +12,17 @@ export const Item = styled.li`
 
 export const ItemText = styled.span`
   font-size: 25px;
-  display: block;
 `;
 
-export const Text = styled.span`
+export const TotalFeedback = styled.span`
   font-size: 20px;
   display: block;
   text-align: center;
   margin-bottom: 20px;
+`;
+
+export const PositiveFeedback = styled.span`
+  font-size: 20px;
+  display: block;
+  text-align: center;
 `;
