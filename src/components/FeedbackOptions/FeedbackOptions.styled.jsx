@@ -1,27 +1,17 @@
 import styled from '@emotion/styled';
 
-export const Block = styled.div`
-  margin-bottom: 60px;
-`;
-
-export const Title = styled.h1`
-  text-align: center;
-  margin-bottom: 40px;
-  text-shadow: 0 0 1em rgb(53, 202, 8);
-`;
-
-export const BtnBlock = styled.div``;
-
 export const Button = styled.button`
-  --green: rgb(53, 202, 8);
-  font-size: 15px;
   padding: 0.7em 2.7em;
-  letter-spacing: 0.06em;
   position: relative;
-  border-radius: 0.6em;
   overflow: hidden;
   transition: all 0.3s;
-  border: 2px solid var(--green);
+
+  font-size: 15px;
+  letter-spacing: 0.06em;
+  color: rgb(53, 202, 8);
+
+  border-radius: 0.6em;
+  border: 2px solid rgb(53, 202, 8);
   background: linear-gradient(
     to right,
     rgba(27, 253, 156, 0.1) 1%,
@@ -29,7 +19,6 @@ export const Button = styled.button`
     transparent 60%,
     rgba(27, 253, 156, 0.1) 100%
   );
-  color: var(--green);
   box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.4),
     0 0 9px 3px rgba(27, 253, 156, 0.1);
 
@@ -45,12 +34,15 @@ export const Button = styled.button`
 
   :before {
     content: '';
+    transition: transform 0.4s ease-in-out;
+
     position: absolute;
     left: -4em;
+    top: 0;
+
     width: 4em;
     height: 100%;
-    top: 0;
-    transition: transform 0.4s ease-in-out;
+
     background: linear-gradient(
       to right,
       transparent 1%,

@@ -35,20 +35,22 @@ export class App extends Component {
     const positivePercentage = this.countPositiveFeedbackPercentage(total);
 
     return (
-      <Section>
-        <FeedbackOptions
-          options={this.options}
-          title={'Please, leave feedback'}
-          handleIncrement={this.handleIncrement}
-        />
-        <Statistics
-          options={this.options}
-          title={'Statistics'}
-          state={this.state}
-          total={total}
-          positivePercentage={positivePercentage}
-        />
-      </Section>
+      <>
+        <Section title={'Please, leave feedback'}>
+          <FeedbackOptions
+            options={this.options}
+            handleIncrement={this.handleIncrement}
+          />
+        </Section>
+        <Section title={'Statistics'}>
+          <Statistics
+            options={this.options}
+            state={this.state}
+            total={total}
+            positivePercentage={positivePercentage}
+          />
+        </Section>
+      </>
     );
   }
 }
